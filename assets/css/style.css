@@ -16,6 +16,15 @@ p {
     padding-top: 0.7em;
 }
 
+input {
+    display: block;
+    /* margin-left: 45%;
+    margin-right: 45%;
+    width: 10%;
+    text-align: center; */
+    margin: 0 auto;
+}
+
 .quote {
     font-family: 'Berkshire Swash', cursive;
     font-size: 2em;

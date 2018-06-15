@@ -44,39 +44,43 @@ document.onkeyup = function (event) {
 
     //else if key is incorrect
     else if (guessKey !== letter) {
-        //subtract 1 from guessesleft
-        guessLeft--;
-        // console.log(guessLeft);
-        var p3 = document.getElementById("left");
-        p3.textContent = ("Guesses Left: " + guessLeft);
+        // for (var x in guessSoFar) {
+        //     //if guess hasn't been guessed so far
+        //     if (guessKey !== guessSoFar[x]) {
+                //subtract 1 from guessesleft
+                guessLeft--;
+                // console.log(guessLeft);
+                var p3 = document.getElementById("left");
+                p3.textContent = ("Guesses Left: " + guessLeft);
 
-        //add letter guessed to letters guessed
-        guessSoFar = (guessSoFar + " " + guessKey);
-        var p4 = document.getElementById("soFar");
-        p4.textContent = ("Guessed So Far: " + guessSoFar);
+                //add letter guessed to letters guessed
+                guessSoFar = (guessSoFar + " " + guessKey);
+                var p4 = document.getElementById("soFar");
+                p4.textContent = ("Guessed So Far: " + guessSoFar);
 
-        //add 1 loss if guessesleft = 0
-        if (guessLeft === 0) {
-            //add 1 to losses
-            lose++;
-            // console.log(lose);
-            var p2 = document.getElementById("losses");
-            p2.textContent = ("Losses: " + lose);
+                //add 1 loss if guessesleft = 0
+                if (guessLeft === 0) {
+                    //add 1 to losses
+                    lose++;
+                    // console.log(lose);
+                    var p2 = document.getElementById("losses");
+                    p2.textContent = ("Losses: " + lose);
 
-            //regenerate random letter
-            letter = letters[Math.floor(Math.random() * letters.length)];
-            // console.log(letter);
+                    //regenerate random letter
+                    letter = letters[Math.floor(Math.random() * letters.length)];
+                    // console.log(letter);
 
-            //reset guessesLeft
-            guessLeft = 9;
-            var p3 = document.getElementById("left");
-            p3.textContent = ("Guesses Left: " + guessLeft);
+                    //reset guessesLeft
+                    guessLeft = 9;
+                    var p3 = document.getElementById("left");
+                    p3.textContent = ("Guesses Left: " + guessLeft);
 
-            //reset guessSoFar
-            guessSoFar = "";
-            var p4 = document.getElementById("soFar");
-            p4.textContent = ("Guessed So Far: ");
-
+                    //reset guessSoFar
+                    guessSoFar = "";
+                    var p4 = document.getElementById("soFar");
+                    p4.textContent = ("Guessed So Far: ");
+            //     }
+            // }
         }
     }
 }
